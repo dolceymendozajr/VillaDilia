@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link href="../Recursos/favicon.png" rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500" rel="stylesheet">
+    <title>Reservas - Hotel Villa Dilia</title>
+    <style media="screen">
+    *{
+      margin:0;
+      padding:0;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body{
+        background: #0099A5;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    img{
+      margin: auto;
+      margin-top: 1em;
+      margin-bottom: 3em;
+      display: block;
+      width: 10em;
+    }
+
+    form{
+      margin: auto;
+      width: 99%;
+      max-width: 500px;
+      background-color: rgba(255,255,255,0.8);
+      padding: 30px;
+      border-radius: 1em;
+    }
+
+    h1{
+      text-align: center;
+      margin-bottom: 1em;
+      font-size: 30px;
+      font-weight: 500;
+      color: rgba(0,0,0,0.7);
+    }
+
+    input,label{
+      display: block;
+      width: 100%;
+      margin: 0.4em;
+      font-size: 1.5em;
+      color: rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .ins,.dates{
+      background-color: rgba(0, 153, 165, 0.5);
+      border: 0;
+      border-radius: 1em;
+      font-weight: 100;
+    }
+
+    ::-webkit-input-placeholder {
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+    }
+
+    .dates::-webkit-clear-button {
+        display: none;
+    }
+
+    .dates::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    .dates::-webkit-calendar-picker-indicator {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .dates::-webkit-calendar-picker-indicator:hover {
+      background-color: transparent;
+    }
+
+
+    #btn{
+      font-weight: 400;
+      margin-top: 3em;
+      color: rgba(0, 153, 165, 1);
+      cursor: pointer;
+      background-color: transparent;
+      border-radius: 1em;
+      border: solid rgba(0, 153, 165, 0.5);
+    }
+
+    #btn:hover{
+      background-color: rgba(0, 153, 165, 0.5);
+      color:  rgba(255,255,255,0.9);
+      transition-property: all;
+      transition-duration: 0.5s;
+    }
+
+    #btn:active{
+      transform:scale(0.9);
+      transition-property: all;
+      transition-duration: 0.2s;
+    }
+
+    </style>
+  </head>
+  <body>
+    <form class="" action="enviar.php" method="post">
+      <a href="../"><img src="../Recursos/logo.png" ></a>
+      <h1>RESERVAS</h1>
+      <input class="ins" type="text" placeholder="Nombre completo" name="nombre" required>
+      <input class="ins" type="email" placeholder="Mail" name="mail" required>
+      <input class="ins" type="tel" placeholder="Telefono" name="telefono">
+      <label>Fecha de ingreso</label>
+      <input class="dates"type="date" placeholder="Fecha de Ingreso" name="chkin" required>
+      <label>Fecha de salida</label>
+      <input class="dates" type="date" placeholder="Fecha de Ingreso" name="chkout"required>
+      <input id="btn" type="submit" name="reservar" value="Reservar">
+    </form>
+  </body>
+</html>
