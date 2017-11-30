@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300');
+
+nav{
+    min-height: 100px;
+}
+
+html{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
